@@ -1,0 +1,7 @@
+/go-ssample-skill.iml
+/go-sample-skill
+/.atomist
+/go-sample-skill.iml
+*.log
+.envrc
+.DS_Store

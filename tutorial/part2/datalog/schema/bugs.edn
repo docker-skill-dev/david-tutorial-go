@@ -1,0 +1,17 @@
+{:attributes
+ {:bug          {:db.entity/attrs [:bug/id :bug/system]}
+  :bug/id       {:db/valueType   :db.type/string
+                 :db/doc         "The Bug identifier"
+                 :db/cardinality :db.cardinality/one}
+  :bug/system   {:db/valueType   :db.type/string
+                 :db/doc         "The Bug system used to track this Bug"
+                 :db/cardinality :db.cardinality/one}
+  :bug/commit   {:db/valueType   :db.type/ref
+                 :db/doc         "Reference to :git/commit"
+                 :db/cardinality :db.cardinality/one}
+  :bug/summary  {:db/valueType   :db.type/string
+                 :db/doc         "The Bug summary message"
+                 :db/cardinality :db.cardinality/one}
+  :bug/state    {:db/valueType   :db.type/string
+                 :db/doc         "The Bug state (OPEN, CLOSED)"
+                 :db/cardinality :db.cardinality/one}}}

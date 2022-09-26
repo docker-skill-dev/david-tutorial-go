@@ -1,0 +1,12 @@
+[:find
+ (pull ?bug
+       [:bug/id
+        :bug/summary
+        :bug/system
+        {:bug/commit
+         [:git.commit/sha
+          :git.commit/message]}])
+ :in $ $before-db % ?ctx
+ :where
+ (attributes-tx ?ctx ?bug :bug/state "CLOSED")
+ [?bug :bug/commit ?commit]]
